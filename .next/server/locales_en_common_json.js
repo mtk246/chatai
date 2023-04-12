@@ -17,7 +17,7 @@ exports.modules = {
   \********************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"headingTitle":"AI Bot in English","title":"Hello world","variable-example":"Using a variable {{count}}","layout":{"language-name-es":"in French, Hello world"},"text-introduction":"How may I help? Ask me something","placeholder-try-something":"Type something..."}');
+module.exports = JSON.parse('{"headingTitle":"AI Bot in English","text-introduction":"How may I help? Ask me something","placeholder-try-something":"Type something...","try-again":"Please try again","text-response":"Response text -","text-clear":"Clear Text","text-submit":"Submit","select-language":"Select Language"}');
 
 /***/ })
 

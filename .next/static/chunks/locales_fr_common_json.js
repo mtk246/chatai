@@ -15,7 +15,7 @@
   \********************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-module.exports = JSON.parse('{"headingTitle":"AI Bot in French","title":"in French, Hello world","variable-example":"in French, Using a variable {{count}}","layout":{"language-name-es":"in French, Hello world"},"text-introduction":"How may I help? Ask me something","placeholder-try-something":"Type something..."}');
+module.exports = JSON.parse('{"headingTitle":"AI Bot en français","text-introduction":"¿Cómo puedo ayudar? Pregúntame algo","placeholder-try-something":"Escribe algo...","try-again":"Inténtalo de nuevo","text-response":"Texto de respuesta -","text-clear":"Borrar texto","text-submit":"Soumettre","select-language":"Seleccione el idioma"}');
 
 /***/ })
 

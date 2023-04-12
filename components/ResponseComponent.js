@@ -19,14 +19,12 @@ export default function ResponseComponent({requestText}) {
                 const data = await apiFunction(responseText);
                 setResponseData(data);
                 setResponseText('');
-                console.log(data);
             } catch (error) {
                 console.error(error);
             }
         }
 
         setIsLoading(false);
-        console.log(isLoading);
     }, [responseText]);
 
     useEffect(() => {
@@ -35,9 +33,7 @@ export default function ResponseComponent({requestText}) {
 
     return (
         <div>
-            <p>
-                Response text -
-            </p>
+            <p> {t('text-response')} </p>
             <div>
                 {
                     isLoading
@@ -54,7 +50,7 @@ export default function ResponseComponent({requestText}) {
                                 ></textarea>
                             )
                             : (
-                                <p> Please try again! </p>
+                                <p> {t('try-again')} </p>
                             )
                 }
             </div>

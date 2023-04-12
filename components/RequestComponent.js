@@ -39,7 +39,6 @@ export default function RequestComponent() {
 
     function clearTextArea() {
         setRequestText('');
-
     }
 
     return (
@@ -62,6 +61,7 @@ export default function RequestComponent() {
                             type="submit"
                             className="btn btn-primary w-100"
                             onClick={onSubmit}
+                            value={t('text-submit')}
                         />
                     </div>
                     <div className="col">
@@ -69,7 +69,7 @@ export default function RequestComponent() {
                             className="btn btn-danger w-100"
                             onClick={clearTextArea}
                         >
-                            Clear Text
+                            {t('text-clear')}
                         </button>
                     </div>
                 </div>
