@@ -1,0 +1,10 @@
+{
+    "headingTitle": "AI Bot in French",
+    "title": "in French, Hello world",
+    "variable-example": "in French, Using a variable {{count}}",
+    "layout": {
+        "language-name-es": "in French, Hello world"
+    },
+    "text-introduction": "How may I help? Ask me something",
+    "placeholder-try-something": "Type something..."
+}
