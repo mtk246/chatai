@@ -20,7 +20,7 @@ export default function ResponseComponent({requestText}) {
                 setResponseData(data);
                 setResponseText('');
             } catch (error) {
-                console.error(error);
+                // console.error(error);
             }
         }
 

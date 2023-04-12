@@ -22,7 +22,6 @@ async function apiFunction(requestText) {
         try {
             const response = await axios.request(options);
             responseData = response.data;
-            console.log(response.data);
 
             return responseData;
         } catch (error) {
@@ -32,7 +31,7 @@ async function apiFunction(requestText) {
                 retryCount++;
             } else {
                 // Other error occurred, throw it
-                console.error(error);
+                // console.error(error);
                 throw error;
             }
         }
