@@ -2,11 +2,13 @@
     "logo-text": "AI",
     "headingTitle": "AI Bot in English",
     "text-introduction": "How may I help? Ask me something",
+    "text-introduction-two": "Your useful AI Bot",
     "placeholder-try-something": "Type something...",
     "try-again": "Please try again",
     "text-response": "Response text -",
     "text-clear": "Clear Text",
     "text-submit": "Submit",
+    "text-reset": "Reset",
     "select-language": "Select Language",
     "footer-github": "Clone / Contribute this repo on GitHub"
 }

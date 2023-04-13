@@ -24,10 +24,10 @@ export default function Navbar({children}) {
 
                 <Dropdown.Menu>
                     {
-                        locales.map((lng) => {
+                        locales.map((lng, index) => {
                             return (
                                 <>
-                                    <Dropdown.Item>
+                                    <Dropdown.Item key={index}>
                                         <Link
                                             href="/"
                                             locale={lng}

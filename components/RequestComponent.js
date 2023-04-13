@@ -2,6 +2,7 @@ import useTranslation from "next-translate/useTranslation";
 import { useState } from "react";
 import SpinnerComponent from "./utils/Spinner";
 import ResponseComponent from "./ResponseComponent";
+import Typewriter from 'typewriter-effect';
 
 export default function RequestComponent() {
     const { t, lang } = useTranslation('common');
@@ -44,7 +45,18 @@ export default function RequestComponent() {
     return (
         <div id="request-component">
             <div className="container-fluid d-flex justify-content-center">
-                <h1> {t('text-introduction')} </h1>
+                <h1>
+                    <Typewriter
+                        options={{
+                            strings: [
+                                t('text-introduction'),
+                                t('text-introduction-two'),
+                            ],
+                            autoStart: true,
+                            loop: true,
+                        }}
+                    />
+                </h1>
             </div>
             <div className="w-100">
                 <textarea
