@@ -2,11 +2,12 @@ import useTranslation from "next-translate/useTranslation";
 import { useCallback, useState, useEffect } from "react";
 import SpinnerComponent from "./utils/Spinner";
 import { apiFunction } from "@/utils/apiHelper";
+import Image from "next/image";
 
-export default function ResponseComponent({requestText}) {
+export default function ImageResponseComponent({requestText}) {
     const { t, lang } = useTranslation('common');
     const [responseText, setResponseText] = useState(requestText);
-    const [responseData, setResponseData] = useState('');
+    const [responseData, setResponseData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isReset, setIsReset] = useState(false);
     
@@ -17,7 +18,7 @@ export default function ResponseComponent({requestText}) {
             setIsLoading(true);
             setIsReset(false);
 
-            const responseType = 'text';
+            const responseType = 'image';
 
             try {
                 const data = await apiFunction(responseText, responseType);
@@ -31,6 +32,8 @@ export default function ResponseComponent({requestText}) {
 
         setIsLoading(false);
     }, [responseText]);
+
+    // console.log(responseData.data);
 
     function resetOnClick() {
         setIsReset(true);
@@ -54,22 +57,24 @@ export default function ResponseComponent({requestText}) {
                                 {t('text-reset')}
                             </button>
                         </div>
-                        <div>
+                        <div className="container row my-5">
                             {
                                 isLoading
                                     ? <SpinnerComponent />
-                                    : responseData !== ''
-                                        ? (
-                                            <textarea
-                                                className="form-control my-2"
-                                                id="response-text-area"
-                                                rows={process.env.REQUEST_INPUT_PLACEHOLDER_ROW_NUM || 8}
-                                                placeholder={t('placeholder-try-something')}
-                                                value={responseData.choices[0].message.content}
-                                                disabled
-                                            ></textarea>
-                                        )
-                                        : (
+                                    : responseData?.data?.length > 0 ? (
+                                            responseData.data.map((item, index) => (
+                                                <div className="col-6" key={index}>
+                                                    <Image
+                                                        src={item.url}
+                                                        width={1024}
+                                                        height={1024}
+                                                        className="img-fluid rounded"
+                                                        alt="image"
+                                                        lazy
+                                                    />
+                                                </div>
+                                            ))
+                                        ) : (
                                             <p> {t('try-again')} </p>
                                         )
                             }
@@ -80,3 +85,17 @@ export default function ResponseComponent({requestText}) {
         </div>
     )
 }
+
+// responseData.data.map((item, index) => {
+//     return (
+//         <div className="col-6" key={index}>
+//             <Image
+//                 key={index}
+//                 src={item.url}
+//                 width={100}
+//                 height={100}
+//                 alt="image"
+//             />
+//         </div>
+//     )
+// })

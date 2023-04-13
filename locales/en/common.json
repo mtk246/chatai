@@ -9,6 +9,8 @@
     "text-clear": "Clear Text",
     "text-submit": "Submit",
     "text-reset": "Reset",
+    "text-generate-text": "Ask Question",
+    "text-generate-image": "Generate Image",
     "select-language": "Select Language",
     "footer-github": "Clone / Contribute this repo on GitHub"
 }

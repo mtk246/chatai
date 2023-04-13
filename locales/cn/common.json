@@ -9,6 +9,8 @@
     "text-clear": "明文",
     "text-submit": "提交",
     "text-reset": "重置",
+    "text-generate-text": "问问题",
+    "text-generate-image": "生成图像",
     "select-language": "选择语言",
     "footer-github": "在 GitHub 上克隆/贡献这个 repo"
 }

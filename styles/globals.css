@@ -1,11 +1,16 @@
 html, body {
   padding: 0;
   margin: 0;
-  min-height: 100vh;
+}
+
+html,
+body,
+body > div:first-child,
+div#__next {
+  height: 100%;
 }
 
 #request-component {
-  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,4 +19,9 @@ html, body {
 
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
   background-color: gainsboro !important;
+}
+
+.btn:active, .btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }

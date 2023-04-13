@@ -1,10 +1,10 @@
 import useTranslation from "next-translate/useTranslation";
 import { useState } from "react";
 import SpinnerComponent from "./utils/Spinner";
-import ResponseComponent from "./ResponseComponent";
 import Typewriter from 'typewriter-effect';
+import ImageResponseComponent from "./ImageResponseComponent";
 
-export default function RequestComponent() {
+export default function ImageRequestComponent() {
     const { t, lang } = useTranslation('common');
 
     const [requestText, setRequestText] = useState('');
@@ -93,7 +93,7 @@ export default function RequestComponent() {
                                 {
                                     isLoading
                                         ? <SpinnerComponent />
-                                        : <ResponseComponent requestText={requestText} />
+                                        : <ImageResponseComponent requestText={requestText} />
                                 }
                             </div>
                         )

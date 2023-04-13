@@ -9,6 +9,8 @@
     "text-clear": "Borrar texto",
     "text-submit": "Entregar",
     "text-reset": "Reiniciar",
+    "text-generate-text": "Pregunta",
+    "text-generate-image": "Generar imagen",
     "select-language": "Seleccione el idioma",
     "footer-github": "Clonar/Contribuir con este repositorio en GitHub"
 }
