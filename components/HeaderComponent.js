@@ -7,6 +7,7 @@ export default function HeaderComponent() {
     return (
         <Head>
             <title>{t('headingTitle')}</title>
+            <link rel="shortcut icon" href="./robot.png" />
         </Head>
     )
 }
