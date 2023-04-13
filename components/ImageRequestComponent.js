@@ -43,7 +43,7 @@ export default function ImageRequestComponent() {
     }
 
     return (
-        <div id="request-component" className="container">
+        <div id="request-component" className="container my-4">
             <div className="container d-flex justify-content-center">
                 <h1>
                     <Typewriter

@@ -8,7 +8,7 @@ export default function FooterComponent() {
     const { t, lang } = useTranslation('common');
     return (
         <>
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="d-flex justify-content-center align-items-center my-4">
                 <FontAwesomeIcon
                     icon={faGithub}
                     size="4x"

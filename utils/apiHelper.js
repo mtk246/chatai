@@ -26,8 +26,6 @@ async function apiFunction(requestText, requestType) {
         try {
             const response = await axios.request(options);
             responseData = response.data;
-            
-            console.log(responseData);
             return responseData;
         } catch (error) {
             if (error.response && error.response.status === 429) {

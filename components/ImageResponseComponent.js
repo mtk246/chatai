@@ -25,7 +25,7 @@ export default function ImageResponseComponent({requestText}) {
                 setResponseData(data);
                 setResponseText('');
             } catch (error) {
-                console.log(error);
+                // console.log(error);
                 // throw error;
             }
         }
@@ -63,7 +63,7 @@ export default function ImageResponseComponent({requestText}) {
                                     ? <SpinnerComponent />
                                     : responseData?.data?.length > 0 ? (
                                             responseData.data.map((item, index) => (
-                                                <div className="col-6" key={index}>
+                                                <div className="col-6 p-3" key={index}>
                                                     <Image
                                                         src={item.url}
                                                         width={1024}
