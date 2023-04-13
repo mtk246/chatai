@@ -41,7 +41,7 @@ export default function ResponseComponent({requestText}) {
     return (
         <div>
             {
-                isReset && (
+                !isReset && (
                     <>
                         <div className="d-flex justify-content-between">
                             <h4> {t('text-response')} </h4>
