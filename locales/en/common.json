@@ -1,4 +1,5 @@
 {
+    "logo-text": "AI",
     "headingTitle": "AI Bot in English",
     "text-introduction": "How may I help? Ask me something",
     "placeholder-try-something": "Type something...",
@@ -6,5 +7,6 @@
     "text-response": "Response text -",
     "text-clear": "Clear Text",
     "text-submit": "Submit",
-    "select-language": "Select Language"
+    "select-language": "Select Language",
+    "footer-github": "Clone / Contribute this repo on GitHub"
 }

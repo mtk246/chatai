@@ -1,4 +1,5 @@
 {
+    "logo-text": "AI",
     "headingTitle": "AI Bot en espagnol",
     "text-introduction": "¿Cómo puedo ayudar? Pregúntame algo",
     "placeholder-try-something": "Escribe algo...",
@@ -6,5 +7,6 @@
     "text-response": "Texto de respuesta -",
     "text-clear": "Borrar texto",
     "text-submit": "Entregar",
-    "select-language": "Seleccione el idioma"
+    "select-language": "Seleccione el idioma",
+    "footer-github": "Clonar/Contribuir con este repositorio en GitHub"
 }

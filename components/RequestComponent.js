@@ -42,11 +42,11 @@ export default function RequestComponent() {
     }
 
     return (
-        <>
+        <div id="request-component">
             <div className="container-fluid d-flex justify-content-center">
                 <h1> {t('text-introduction')} </h1>
             </div>
-            <div>
+            <div className="w-100">
                 <textarea
                     className="form-control my-2"
                     id="requestTextArea"
@@ -87,6 +87,6 @@ export default function RequestComponent() {
                         )
                 }
             </div>
-        </>
+        </div>
     )
 }

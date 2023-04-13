@@ -42,7 +42,7 @@ export default function ResponseComponent({requestText}) {
                             ? (
                                 <textarea
                                     className="form-control my-2"
-                                    id="requestTextArea"
+                                    id="response-text-area"
                                     rows={process.env.REQUEST_INPUT_PLACEHOLDER_ROW_NUM || 8}
                                     placeholder={t('placeholder-try-something')}
                                     value={responseData.choices[0].message.content}

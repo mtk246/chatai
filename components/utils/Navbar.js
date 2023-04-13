@@ -10,7 +10,8 @@ export default function Navbar({children}) {
 
     return (
         <>
-            <Dropdown className="ms-auto d-flex justify-content-end">
+            <Dropdown className="d-flex justify-content-between container w-100 my-3">
+                <h1> {t('logo-text')} </h1>
                 <Dropdown.Toggle variant="secondary" id="dropdown-basic">
                     {t('select-language')}
                 </Dropdown.Toggle>
