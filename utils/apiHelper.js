@@ -13,7 +13,7 @@ async function apiFunction(requestText, requestType) {
         },
         data: requestType === 'text'
             ? '{"model":"gpt-3.5-turbo","messages":[{"role":"user", "content":"' + requestText + '"}]}'
-            : '{"prompt":"' + requestText + '", "n":4, "size":"1024x1024"}',
+            : '{"prompt":"' + requestText + '", "n": 2, "size": "512x512"}',
     };
 
     const MAX_RETRIES = 3;
