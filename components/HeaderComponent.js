@@ -6,6 +6,7 @@ export default function HeaderComponent() {
 
     return (
         <Head>
+            <meta name="description" content={t('headingTitle')} />
             <title>{t('headingTitle')}</title>
             <link rel="shortcut icon" href="./robot.png" />
         </Head>
