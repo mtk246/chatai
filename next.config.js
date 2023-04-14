@@ -15,7 +15,8 @@ module.exports = nextTranslate({
     X_RAPIDAPI_KEY: process.env.X_RAPIDAPI_KEY,
     X_RAPIDAPI_HOST: process.env.X_RAPIDAPI_HOST,
     GPT_MODEL: process.env.GPT_MODEL,
-    MAX_GENERATE_IMAGE: process.env.MAX_GENERATE_IMAGE
+    MAX_GENERATE_IMAGE: process.env.MAX_GENERATE_IMAGE,
+    SITE_URL: process.env.SITE_URL
   },
   images: {
     domains: ['oaidalleapiprodscus.blob.core.windows.net'],
