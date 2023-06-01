@@ -11,10 +11,10 @@ export default function ComponentSwitcher() {
             name: t('text-generate-text'),
             path: "/",
         },
-        {
-            name: t('text-generate-image'),
-            path: "/generate-image"
-        }
+        // {
+        //     name: t('text-generate-image'),
+        //     path: "/generate-image"
+        // }
     ]
 
     return (
