@@ -12,7 +12,7 @@ async function apiFunction(requestText, requestType) {
           'X-RapidAPI-Host': process.env.X_RAPIDAPI_HOST,
         },
         data: requestType === 'text'
-            ? '{"model":"gpt-3.5-turbo","messages":[{"role":"user", "content":"' + requestText + '"}]}'
+            ? '{"messages":[{"role":"user", "content":"' + requestText + '"}]}'
             : '{"prompt":"' + requestText + '", "n": 2, "size": "512x512"}',
     };
 
@@ -21,6 +21,9 @@ async function apiFunction(requestText, requestType) {
 
     let retryCount = 0;
     let responseData;
+
+    const response = await axios.request(options);
+    responseData = response.data;
 
     while (retryCount < MAX_RETRIES) {
         try {
@@ -34,14 +37,12 @@ async function apiFunction(requestText, requestType) {
                 retryCount++;
             } else {
                 // Other error occurred, throw it
-                // console.error(error);
                 throw error;
             }
         }
     }
 
     // Maximum number of retries exceeded, throw error
-    console.error('Exceeded maximum number of retries');
     throw new Error('Exceeded maximum number of retries');
 }
 
