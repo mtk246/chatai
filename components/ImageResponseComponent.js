@@ -6,6 +6,8 @@ import Image from "next/image";
 
 export default function ImageResponseComponent({requestText}) {
     const { t, lang } = useTranslation('common');
+    const [parameters, setParameters] = useState(null);
+
     const [responseText, setResponseText] = useState(requestText);
     const [responseData, setResponseData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -14,21 +16,35 @@ export default function ImageResponseComponent({requestText}) {
     const fetchApi = useCallback(async () => {
         if (responseText === '') {
             return;
-        } else {
-            setIsLoading(true);
-            setIsReset(false);
-
-            const responseType = 'image';
-
-            try {
-                const data = await apiFunction(responseText, responseType);
-                setResponseData(data);
-                setResponseText('');
-            } catch (error) {
-                // console.log(error);
-                // throw error;
-            }
         }
+
+        const regex = new RegExp(process.env.REGEX_IMAGE_GENERATE, "i");
+
+        if (responseText !== '' && regex.test(responseText)) {
+            setResponseData({
+                data: [
+                    {
+                        url: 
+                    }
+                ]
+            }
+            )
+        } 
+        // else {
+        //     setIsLoading(true);
+        //     setIsReset(false);
+
+        //     const responseType = 'image';
+
+        //     try {
+        //         const data = await apiFunction(responseText, responseType);
+        //         setResponseData(data);
+        //         setResponseText('');
+        //     } catch (error) {
+        //         // console.log(error);
+        //         // throw error;
+        //     }
+        // }
 
         setIsLoading(false);
     }, [responseText]);
@@ -42,6 +58,10 @@ export default function ImageResponseComponent({requestText}) {
     useEffect(() => {
         fetchApi();
     });
+
+    if (!parameters) {
+        return <SpinnerComponent />
+    }
 
     return (
         <div>
